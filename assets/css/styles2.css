@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    color: rgb(163, 13, 13);
+}
+
+img {
+    width: 230px;
+    height: 180px;
+}
