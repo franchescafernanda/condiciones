@@ -1,18 +1,20 @@
-const btn = document.querySelector("button");
-const selects = document.querySelectorAll("select");
 
-btn.addEventListener("click", () => {
-    console.log("has hecho click en el botón");
-    console.log(selects);
-    const [{ value: valueA}], [{ value: valueB}], [{ value: valueC}] =
-    selects;
-    const password = `${valueA}$(valueB)$(valueC)`;
-    if (password = "911") {
-        console.log("password 1 correct");
-    }
-    if (password = "714") {
-        console.log("password 2 correct"); /*verificar si me esta funcionando con if el 2do password*/
-    }
-});
+function apretar() {
+    const sel1 = document.querySelector("#select1").value
+    const sel2 = document.querySelector("#select2").value
+    const sel3 = document.querySelector("#select3").value
+    /* console.log(sel1, sel2, sel3) */
+    const boton = document.querySelector("#btn")
+    const msj = document.querySelector("#mensaje")
 
-/*lograr agregar los mensajes de password con innerHtml*/
+    const pack = sel1 + sel2 + sel3 
+    /* console.log(pack) */
+
+    if(pack == 911) {
+        msj.innerHTML = "password  1  correcto"
+    } else if (pack == 714){
+        msj.innerHTML = "password  2  correcto"
+    } else {
+        msj.innerHTML = "password incorrecto"
+    }
+}
